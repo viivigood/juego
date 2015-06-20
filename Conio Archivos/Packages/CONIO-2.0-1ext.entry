@@ -1,0 +1,21 @@
+[Setup]
+AppName=CONIO
+AppVersion=2.0
+Description=Borland-style CONIO implementation for MinGW/Dev-C++:  Text-console functions for MinGW.  Rewritten version 2.0.  By Hongli Lai, tkorrovi, Andrew Westcott, and Michal Molhanec, circa 2004
+Url=http://conio.sf.net/
+
+[Files]
+docs\conio\CONIO.chm
+docs\conio\CONIO.pdf
+docs\conio\Introduction.html
+Examples\conio\conio_test.c
+Examples\conio\constream_test.cpp
+include\conio2.h
+include\constream
+lib\libconio.a
+lib\libconio_unicode.a
+C:\Users\Junior\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bloodshed Dev-C++\CONIO\manual (CHM).lnk
+C:\Users\Junior\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bloodshed Dev-C++\CONIO\manual (PDF).lnk
+C:\Users\Junior\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bloodshed Dev-C++\CONIO\Introduction.lnk
+C:\Users\Junior\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bloodshed Dev-C++\CONIO\Examples.lnk
+C:\Users\Junior\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Bloodshed Dev-C++\CONIO\Homepage.url

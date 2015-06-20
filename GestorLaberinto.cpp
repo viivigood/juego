@@ -40,6 +40,9 @@ Laberinto* GestorLaberinto::crear(char archivos[][letrasNombre],int*indices ){
         
         srand(time(NULL));
         
+        laberintos[i].SetPctArtefacto(pctA*i);
+        laberintos[i].SetPctMonstruo(pctM*i);
+        
         while(!arch.eof()){
             arch>>celdita;
             if(celdita.GetTipo()=='\n'){

@@ -36,7 +36,7 @@ int Juego::jugar(){
     char archivos[cantArchivos][letrasNombre]={"lab1.txt","lab2.txt","lab3.txt","lab4.txt","lab5.txt","lab6.txt","lab7.txt","lab7.txt","lab7.txt"};
     int *indices=crearArreglo(cantArchivos);
     //Creación de arreglos con los porcentajes para monstruos y artefactos
-    crearArregloPorcentajes(pctMonstruos,pctArtefactos,cantArchivos);
+    crearArregloPorcentajes(pctMonstruos,pctArtefactos,cantArchivos);//<--los laberintos ya se cargan con porcentajes
     this->listaLaberintos=gestor.crear(archivos,indices);
     this->laberActual = this->listaLaberintos[0];
     //Crear Monstruos y artefactos

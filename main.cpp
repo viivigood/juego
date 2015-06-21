@@ -85,7 +85,7 @@ void dibujarLaberinto(){
     //Le paso la posición del "heroe"
     dibujante.dibujaLaberinto(laberintos[5],5,7);
     dibujante.dibujarAccionesLaberinto();
-    //cout<<laberintos[5].arregloNiveles()<<endl;;
+    cout<<laberintos[5].arregloNiveles()<<endl;;
 }
 int main(int argc, char** argv) {
     //test_Movimiento();

@@ -17,7 +17,7 @@ public:
     virtual ~GestorLaberinto();
     Laberinto* crear(char archivos[cantArchivos][letrasNombre], int* );
 private:
-
+    void nivelesLab(int*,int);
 };
 
 #endif	/* GESTORLABERINTO_H */

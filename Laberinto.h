@@ -8,6 +8,8 @@
 #ifndef LABERINTO_H
 #define	LABERINTO_H
 #include "Celda.h"
+#include "Monstruo.h"
+#include "Artefacto.h"
 #define MAX 500
 #define niveles 3
 class Laberinto {
@@ -24,6 +26,7 @@ public:
     void setLab(int M,int N,Celda lab[MAX][MAX]);
     Laberinto& operator=(Laberinto&lab);
     void imprimir();
+    int arregloNiveles();
 private:
     int M;
     int N;
@@ -31,8 +34,10 @@ private:
     int nivelesMonstruo[niveles];
     double pctArtefacto;
     int nivelesArtefacto[niveles];
-    Celda lab[MAX][MAX];    
     
+    Celda lab[MAX][MAX];    
+    Monstruo*listaMonstruos;
+    Artefacto*listaArtefactos;
 };
 
 #endif	/* LABERINTO_H */

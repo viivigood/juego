@@ -28,9 +28,36 @@ GestorLaberinto::~GestorLaberinto() {
     
 }
 
+void GestorLaberinto::nivelesLab(int*arregloNiveles,int nivel){
+    //Considerando solo 3 niveles de monstruos y artefactos, 1 si el nivel i puede aparecer en el laberinto
+    switch (nivel){
+        case 0:
+        case 1:
+            arregloNiveles[0]=1;
+            break;
+        case 2:
+        case 3:
+            arregloNiveles[0]=1;
+            arregloNiveles[1]=1;
+            break;
+        case 4:
+        case 5:
+            arregloNiveles[1]=1;
+            break;
+        case 6:
+        case 7:
+            arregloNiveles[1]=1;
+            arregloNiveles[2]=1;
+            break;
+        case 8:
+            arregloNiveles[2]=1;   
+            break;
+    }
+}
 Laberinto* GestorLaberinto::crear(char archivos[][letrasNombre],int*indices ){
     Laberinto *laberintos=new Laberinto[cantArchivos];
     double probM,probA;
+    int arregloNiveles[niveles];
     for (int i=0;i<cantArchivos;i++){
         
         ifstream arch(archivos[i],ios::in);
@@ -39,7 +66,12 @@ Laberinto* GestorLaberinto::crear(char archivos[][letrasNombre],int*indices ){
         Celda lab2[MAX][MAX];
         
         srand(time(NULL));
-        
+        for (int j=0;j<niveles;j++) arregloNiveles[j]=0;
+        nivelesLab(arregloNiveles,i);
+        laberintos[i].SetPctArtefacto(pctA*i);
+        laberintos[i].SetPctMonstruo(pctM*i);
+        laberintos[i].SetNivelesArtefacto(arregloNiveles);
+        laberintos[i].SetNivelesMonstruo(arregloNiveles);
         while(!arch.eof()){
             arch>>celdita;
             if(celdita.GetTipo()=='\n'){

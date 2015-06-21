@@ -68,3 +68,9 @@ void Laberinto::imprimir(){
         cout<<endl;
     }
 }
+
+int Laberinto::arregloNiveles(){
+    cout<<nivelesMonstruo[0]<<" "<<nivelesMonstruo[1]<<" "<<nivelesMonstruo[2]<<" ";
+//    int n=8;
+//    cout<<n<<endl;
+}

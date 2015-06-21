@@ -66,12 +66,17 @@ Laberinto* GestorLaberinto::crear(char archivos[][letrasNombre],int*indices ){
         Celda lab2[MAX][MAX];
         
         srand(time(NULL));
+
         for (int j=0;j<niveles;j++) arregloNiveles[j]=0;
         nivelesLab(arregloNiveles,i);
         laberintos[i].SetPctArtefacto(pctA*i);
         laberintos[i].SetPctMonstruo(pctM*i);
         laberintos[i].SetNivelesArtefacto(arregloNiveles);
         laberintos[i].SetNivelesMonstruo(arregloNiveles);
+
+        laberintos[i].SetPctArtefacto(pctA*i);
+        laberintos[i].SetPctMonstruo(pctM*i);
+
         while(!arch.eof()){
             arch>>celdita;
             if(celdita.GetTipo()=='\n'){
